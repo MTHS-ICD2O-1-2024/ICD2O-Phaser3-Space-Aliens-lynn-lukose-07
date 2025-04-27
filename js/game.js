@@ -7,8 +7,10 @@
 // This is the Phaser3 game configuration file
 
 import SplashScene from "./splashScene.js"
+import TitleScene from "./titleScene.js"
 
 const splashScene = new SplashScene()
+const titleScene = new TitleScene ()
 /**
  * Start Phaser Game.
  */
@@ -34,5 +36,6 @@ const config = {
 const game = new Phaser.Game(config)
 
 game.scene.add("splashScene", splashScene)
+game.scene.add("titleScene", titleScene)
 
 game.scene.start("splashScene")

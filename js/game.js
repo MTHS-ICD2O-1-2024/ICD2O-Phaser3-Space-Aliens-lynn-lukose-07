@@ -6,9 +6,11 @@
 // Created on: Apr 2025
 // This is the Phaser3 game configuration file
 
+// statements for scene import
 import SplashScene from "./splashScene.js"
 import TitleScene from "./titleScene.js"
 
+// create the new scenes
 const splashScene = new SplashScene()
 const titleScene = new TitleScene ()
 /**
@@ -34,8 +36,11 @@ const config = {
 }
 
 const game = new Phaser.Game(config)
+// console.log(game)
 
+// load scenes
 game.scene.add("splashScene", splashScene)
 game.scene.add("titleScene", titleScene)
 
+// the scart scene
 game.scene.start("splashScene")

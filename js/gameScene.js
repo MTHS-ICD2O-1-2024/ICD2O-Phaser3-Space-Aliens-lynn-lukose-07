@@ -4,20 +4,18 @@
 //
 // Created by: Lynn Lukose
 // Created on: Apr 2025
-// This is the Menu Scene
+// This is the Game Scene
 
 /**
- * This class is the Menu Scene.
+ * This class is the splash scene
  */
-class MenuScene extends Phaser.Scene {
+
+class SplashScene extends Phaser.Scene {
   /**
    * This method is the constructor
    */
   constructor() {
-    super({ key: "menuScene" })
-
-    this.menuSceneBackgroundImage = null
-    this.startButton = null
+    super({ key: "gameScene" })
   }
 
   /**
@@ -35,9 +33,7 @@ class MenuScene extends Phaser.Scene {
    * Use it to load assets.
    */
   preload() {
-    console.log("Menu Scene")
-    this.load.image("menuSceneBackground", "./assets/aliens_screen_image2.jpg")
-    this.load.image("startButton", "./assets/start.png")
+    console.log("Game Scene")
   }
 
   /**
@@ -46,13 +42,7 @@ class MenuScene extends Phaser.Scene {
    * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
    */
   create(data) {
-    this.menuSceneBackgroundImage = this.add.sprite(0, 0, "menuSceneBackground")
-    this.splashSceneBackgroundImage.x = 1920 / 2
-    this.splashSceneBackgroundImage.y = 1080 / 2
-
-    this.startButton = this.add.sprite(1920 / 2, 1080 / 2 + 100, "startButton")
-    this.startButton.setInteractive({useHandCursor: true})
-    this.startButton.on("pointerdown", () => this.clickButton())
+    // pass
   }
 
   /**
@@ -64,10 +54,6 @@ class MenuScene extends Phaser.Scene {
   update(time, delta) {
     // pass
   }
-
-  clickButton() {
-    this.scene.start("gameScene")
-  }
 }
 
-export default MenuScene
+export default GameScene

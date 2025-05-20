@@ -71,10 +71,6 @@ class TitleScene extends Phaser.Scene {
     if (time > 8000) {
       this.scene.switch("menuScene")
     }
-<<<<<<< HEAD
-    // pass
-=======
->>>>>>> a009babdbfdf94168c456aa6c2521b799648763b
   }
 }
 

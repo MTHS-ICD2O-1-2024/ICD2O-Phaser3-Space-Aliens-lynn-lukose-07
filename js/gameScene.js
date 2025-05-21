@@ -7,7 +7,7 @@
 // This is the Game Scene
 
 /**
- * This class is the splash scene
+ * This class is the Game Scene scene
  */
 
 class GameScene extends Phaser.Scene {
@@ -38,7 +38,7 @@ class GameScene extends Phaser.Scene {
   preload() {
     console.log("Game Scene")
 
-    this.load.image("starBackground", "./assets/starBackground")
+    this.load.image("starBackground", "./assets/starBackground.png")
     this.load.image("ship", "./assets/spaceShip.png")
   }
 

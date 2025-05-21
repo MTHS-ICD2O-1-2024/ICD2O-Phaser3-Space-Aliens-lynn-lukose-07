@@ -14,7 +14,7 @@ import GameScene from "./gameScene.js"
 
 // create the new scenes
 const splashScene = new SplashScene()
-const titleScene = new TitleScene ()
+const titleScene = new TitleScene()
 const menuScene = new MenuScene()
 const gameScene = new GameScene()
 /**
@@ -27,7 +27,7 @@ const config = {
   physics: {
     default: "arcade",
     arcade: {
-      debug: true,
+      debug: false,
     },
   },
   // set background color

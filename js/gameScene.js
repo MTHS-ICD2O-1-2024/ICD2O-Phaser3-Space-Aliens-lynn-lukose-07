@@ -67,6 +67,8 @@ class GameScene extends Phaser.Scene {
    * @param {number} delta - The delta time in ms since last frame.
    */
   update(time, delta) {
+    // hopefully called 60 times a second!
+
     const keyLeftObj = this.input.keyboard.addKey("LEFT")
     const keyRightObj = this.input.keyboard.addKey("RIGHT")
     const keySpaceObj = this.input.keyboard.addKey("SPACE")
@@ -89,7 +91,7 @@ class GameScene extends Phaser.Scene {
       if (this.fireMissile === false) {
         // fire missile
         this.fireMissile = true
-        const aNewMissile = this.physics.add.sprite(this.ship.x, this.ship.y, 'missile')
+        const aNewMissile = this.physics.add.sprite(this.ship.x, this.ship.y, "missile")
         this.missileGroup.add(aNewMissile)
       }
     }

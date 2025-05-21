@@ -11,7 +11,7 @@
  */
 class MenuScene extends Phaser.Scene {
   /**
-   * This method is the constructor
+   * This method is the constructor.
    */
   constructor() {
     super({ key: "menuScene" })
@@ -21,17 +21,17 @@ class MenuScene extends Phaser.Scene {
   }
 
   /**
-   * Can be defined on your own scenes.
+   * Can be defined on your own Scenes.
    * This method is called by the Scene Manager when the scene starts,
-   *  before preload() and create().
+   *  before preload () and create ().
    * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
    */
   init(data) {
-    this.cameras.main.setBackgroundColor("ffffff")
+    this.cameras.main.setBackgroundColor("#ffffff")
   }
 
   /**
-   * Can be defined on your own scenes.
+   * Can be defined on your own Scenes.
    * Use it to load assets.
    */
   preload() {
@@ -41,9 +41,9 @@ class MenuScene extends Phaser.Scene {
   }
 
   /**
-   * Can be defined on your own scenes.
+   * Can be defined on your own Scenes.
    * Use it to create your game objects.
-   * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
+   * @param {object} data Any data passed via ScenePlugin.add() or ScenePlugin.start().
    */
   create(data) {
     this.menuSceneBackgroundImage = this.add.sprite(0, 0, "menuSceneBackground")
@@ -51,15 +51,15 @@ class MenuScene extends Phaser.Scene {
     this.menuSceneBackgroundImage.y = 1080 / 2
 
     this.startButton = this.add.sprite(1920 / 2, 1080 / 2 + 100, "startButton")
-    this.startButton.setInteractive({useHandCursor: true})
+    this.startButton.setInteractive({ useHandCursor: true })
     this.startButton.on("pointerdown", () => this.clickButton())
   }
 
   /**
-   * should be overridden by my own scenes.
-   * method called once per game step while scene is running.
-   * @param {number} time - current time.
-   * @param {number} delta - The delta time in ms since last frame.
+   * Should be overridden by your own Scenes.
+   * This method is called once per game step while the scene is running.
+   * @param {number} time The current time.
+   * @param {number} delta The delta time in ms since the last frame.
    */
   update(time, delta) {
     // pass

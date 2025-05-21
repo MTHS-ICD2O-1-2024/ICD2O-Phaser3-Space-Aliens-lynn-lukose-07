@@ -27,7 +27,6 @@ class GameScene extends Phaser.Scene {
   constructor() {
     super({ key: "gameScene" })
 
-    this.background = null
     this.ship = null
     this.fireMissile = false
     this.score = 0
